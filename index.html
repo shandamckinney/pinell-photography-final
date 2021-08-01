@@ -110,6 +110,15 @@
         
         }
 
+        .mobile-div-top{
+            height:auto;
+            width:100%;    
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:500;
+        }
+
 
         .div-bottom {
             width:100%;    
@@ -119,6 +128,17 @@
             margin-top:56rem;
             z-index:600;
             position:relative;
+            overflow-x: hidden;
+        }
+        .mobile-div-bottom {
+            width:100%;    
+            height: auto;
+            background:#F1FAEE;
+            background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+            z-index:600;
+            position:relative;
+            margin-top: 97%;
+            overflow-x: hidden;
         }
 
         .font-size-1{
@@ -142,13 +162,16 @@
         @media only screen and (max-width: 768px) {
         /* For mobile phones: */
             .desktop-body{
-                visibility: hidden;
+                display:none;
+            }
+            .desktop-nav{
+                display:none;
             }
         }
     </style>
   </head>
   <body style="overflow-x: hidden">
-    <div>
+    <div class="desktop-nav">
         <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #F1FAEE; min-height: 15%"> 
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="logo.png" alt="Pinell Photography" width="64"></a>
@@ -342,6 +365,15 @@
                 </div>
             </div>
         </div>  
+    </div>
+    <div class="mobile-body" style="overflow-x: hidden">
+        <img src="Becca-73.jpg" alt="becca"  class="mobile-div-top" style="max-width: 100%; width: 65%">
+        <div class="mobile-div-bottom" style="overflow-x: hidden; max-width: 100%; width: 65%">
+            <div class="text-center" style="background-color: #1D3557; color: white">
+                <span class="body-font-300 font-size-125">Capturing all the</span>
+                <p class="title-font-300-italic font-size-125 text-white">feels</p>
+            </div>
+        </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
